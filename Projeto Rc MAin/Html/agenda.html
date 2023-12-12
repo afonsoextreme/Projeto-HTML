@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        ul.months {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.months li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .event-details {
+            display: none;
+        }
+    </style>
+    <script>
+        function showEvents(monthId) {
+            // Oculta todos os detalhes do evento
+            var eventDetails = document.querySelectorAll('.event-details');
+            eventDetails.forEach(function (event) {
+                event.style.display = 'none';
+            });
+
+            // Mostra os detalhes do evento do mês clicado
+            var selectedEvent = document.getElementById(monthId);
+            selectedEvent.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Agenda</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showEvents('janeiro')">Janeiro</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('fevereiro')">Fevereiro</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('marco')">Março</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('abril')">Abril</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('maio')">Maio</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('junho')">Junho</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('julho')">Julho</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('agosto')">Agosto</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('setembro')">Setembro</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('outubro')">Outubro</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('novembro')">Novembro</a></li>
+            <li><a href="javascript:void(0);" onclick="showEvents('dezembro')">Dezembro</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <ul class="months">
+            <li id="janeiro" class="event-details">
+                <h2>Janeiro</h2>
+                <p>Evento Disponível: Dillaz</p>
+                <p>Data: 20/01/2023</p>
+                <p>Local: Coliseu</p>	
+                <p>Categoria: Música</p>
+            </li>
+            <li id="fevereiro" class="event-details">
+                <h2>Fevereiro</h2>
+                <p>Evento Disponível: Loner Jonny</p>
+                <p>Data: 11/02/2023</p>
+                <p>Local: Altice Arena</p>
+                <p>Categoria: Música</p>
+            </li>
+            <li id="marco" class="event-details">
+                <h2>Março</h2>
+                <p>Evento Disponível: Diogo Piçarra</p>
+                <p>Data: 30/06/2024</p>
+                <p>Local: Porto</p>
+                <p>Categoria: Música</p>
+            </li>
+            <li id="abril" class="event-details">
+                <h2>Abril</h2>
+                <p>Evento Disponível: GUILHERME FONSECA - NÃO FAZ SENTIDO</p>
+                <p>Data: 10/02/2025</p>
+                <p>Local: Lisboa</p>
+                <p>Categoria: Comédia</p>
+            </li>
+            <li id="maio" class="event-details">
+                <h2>Maio</h2>
+                <p>Evento Disponível: Drake</p>
+                <p>Data: 14/07/2026</p>
+                <p>Local: Altice Arena</p>
+                <p>Categoria: Música</p>
+            </li>
+            <li id="junho" class="event-details">
+                <h2>Junho</h2>
+                <p>Evento Disponível: Coldplay</p>
+                <p>Data: 27/08/2030</p>
+                <p>Local: Estádio José Alvalade XXI</p>
+                <p>Categoria: Música</p>
+            </li>
+            <!-- Adicione os outros meses aqui com informações sem eventos disponíveis -->
+        </ul>
+    </section>
+
+    <!-- Seus scripts JavaScript aqui -->
+
+</body>
+</html>
+

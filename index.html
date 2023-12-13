@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilheteira de Concertos</title>
+
+    <script>
+        // Script específico para a página de Index
+        function showEventsIndex(monthId) {
+            // Oculta todos os detalhes do evento
+            var eventDetails = document.querySelectorAll('.event-details');
+            eventDetails.forEach(function (event) {
+                event.style.display = 'none';
+            });
+
+            // Mostra os detalhes do evento do mês clicado
+            var selectedEvent = document.getElementById(monthId);
+            if (selectedEvent) {
+                selectedEvent.style.display = 'block';
+            }
+
+            // Oculta todos os detalhes da sala
+            var venueDetails = document.querySelectorAll('.venue-details');
+            venueDetails.forEach(function (venue) {
+                venue.style.display = 'none';
+            });
+
+            // Mostra os detalhes da sala do mês clicado
+            var selectedVenue = document.getElementById('venue-' + monthId);
+            if (selectedVenue) {
+                selectedVenue.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Bilheteira de Concertos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="agenda.html">Agenda</a></li>
+            <!-- Adicione o link para "Salas" apontando para Salas1.html -->
+            <li><a href="Sala.html">Salas</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <!-- Adicione uma lista para mostrar as salas disponíveis -->
+        <ul class="venue-details">
+            <li id="sala-coliseu" class="event-details">
+                <h2>Coliseu</h2>
+                <p>Local: Coliseu</p>
+                <p>Capacidade: 5000 pessoas</p>
+                <!-- Adicione outras informações sobre o Coliseu, se necessário -->
+            </li>
+            <li id="sala-altice-arena" class="event-details">
+                <h2>Altice Arena</h2>
+                <p>Local: Altice Arena</p>
+                <p>Capacidade: 20000 pessoas</p>
+                <!-- Adicione outras informações sobre a Altice Arena, se necessário -->
+            </li>
+            <!-- Adicione outras salas aqui -->
+        </ul>
+
+        <!-- Adicione a lista de eventos existente aqui -->
+        <ul class="months">
+            <!-- Conteúdo da Agenda existente permanece inalterado -->
+        </ul>
+    </section>
+
+    <!-- Seus scripts JavaScript aqui -->
+</body>
+</html>
